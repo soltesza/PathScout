@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PathScout</string>
+
+    <array name="search_settings">
+        <item>Activity</item>
+        <item>Distance</item>
+        <item>Difficulty</item>
+    </array>
 </resources>
