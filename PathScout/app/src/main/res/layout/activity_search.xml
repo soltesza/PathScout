@@ -35,13 +35,14 @@
                 android:textSize="30sp" />
 
             <RadioGroup
+                android:id="@+id/activity_selector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/walk_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -50,7 +51,7 @@
                     android:textSize="18sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/run_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -58,7 +59,7 @@
                     android:textSize="18sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/bike_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -77,12 +78,13 @@
             android:orientation="vertical">
 
             <Switch
-                android:id="@+id/switch1"
+                android:id="@+id/diff_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
                 android:gravity="left|center"
+                android:onClick="toggleDifficulty"
                 android:paddingLeft="30dp"
                 android:paddingRight="20dp"
                 android:text="Difficulty"
@@ -90,17 +92,22 @@
                 android:textSize="30sp" />
 
             <SeekBar
-                android:id="@+id/seekBar3"
+                android:id="@+id/diff_slider1"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:visibility="visible" />
+                android:max="10"
+                android:progress="3" />
 
             <SeekBar
-                android:id="@+id/seekBar2"
+                android:id="@+id/diff_slider2"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:max="10"
+                android:progress="3" />
 
             <View style="@style/Divider"/>
 
@@ -113,12 +120,13 @@
             android:orientation="vertical">
 
             <Switch
-                android:id="@+id/switch2"
+                android:id="@+id/dist_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
                 android:gravity="left|center"
+                android:onClick="toggleDistance"
                 android:paddingLeft="30dp"
                 android:paddingRight="20dp"
                 android:text="Distance"
@@ -126,13 +134,13 @@
                 android:textSize="30sp" />
 
             <SeekBar
-                android:id="@+id/seekBar5"
+                android:id="@+id/dist_slider1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <SeekBar
-                android:id="@+id/seekBar4"
+                android:id="@+id/dist_slider2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
